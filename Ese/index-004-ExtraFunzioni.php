@@ -36,10 +36,6 @@ echo "nella parola " .  $parola . " ci sono " . $contatore_vocali . " vocali";
 STEP 2 -- ESTRAZIONE, INCAPSULAMENTO, ASTRAZIONE
 */
 
-// function checkVocal($string)
-// {
-
-// }
 
 
 
@@ -111,12 +107,18 @@ function checkU($string)
 
 function checkVocali($string)
 {
-
-    if (checkA($string) || checkE($string) || checkI($string) || checkO($string) || checkU($string)) {
-       
-    }
     
+    
+    for ($i = 0; $i < strlen($string); $i++) {
+
+        $contatore_vocali = 0;
+
+        if (checkA($string) || checkE($string) || checkI($string) || checkO($string) || checkU($string)) {
+            
+            $contatore_vocali +=1;
+        }
+    }
+    echo $contatore_vocali;
 }
 
-
-checkVocali('ciop');
+checkVocali('aiuola');
