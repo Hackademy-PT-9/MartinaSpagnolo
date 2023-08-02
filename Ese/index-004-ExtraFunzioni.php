@@ -107,13 +107,13 @@ function checkU($string)
 
 function checkVocali($string)
 {
-    
+    $contatore_vocali = 0;
     
     for ($i = 0; $i < strlen($string); $i++) {
 
-        $contatore_vocali = 0;
+       
 
-        if (checkA($string) || checkE($string) || checkI($string) || checkO($string) || checkU($string)) {
+        if (checkA($string[$i]) || checkE($string[$i]) || checkI($string[$i]) || checkO($string[$i]) || checkU($string[$i])) {
             
             $contatore_vocali +=1;
         }
