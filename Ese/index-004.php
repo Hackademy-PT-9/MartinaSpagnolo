@@ -65,8 +65,8 @@ $company5 = new Company('Xioami', 'CHI', 3);
 // echo $company4->description();
 // echo $company5->description();
 
-echo $company1->annualCost();
-echo $company2->annualCost();
-echo $company3->annualCost();
-echo $company4->annualCost();
-echo $company5->annualCost();
+// echo $company1->annualCost();
+// echo $company2->annualCost();
+// echo $company3->annualCost();
+// echo $company4->annualCost();
+// echo $company5->annualCost();
