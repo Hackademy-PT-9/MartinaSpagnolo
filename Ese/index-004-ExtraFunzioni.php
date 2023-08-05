@@ -40,85 +40,52 @@ STEP 2 -- ESTRAZIONE, INCAPSULAMENTO, ASTRAZIONE
 
 
 
-function checkA($string)
-{
-    $contatore_vocali = 0;
-
-    for ($i = 0; $i < strlen($string); $i++) {
-
-        if ($string[$i] == 'a') {
-            $contatore_vocali++;
-        }
+function countA ($string) {
+    if ($string == "a") {
+        return true;
     }
-    //echo $contatore_vocali;
+    return false;
 }
 
-function checkE($string)
-{
-    $contatore_vocali = 0;
 
-    for ($i = 0; $i < strlen($string); $i++) {
-
-        if ($string[$i] == 'e') {
-            $contatore_vocali++;
-        }
+function countE ($string) {
+    if ($string == "e") {
+        return true;
     }
-    //echo $contatore_vocali;
+    return false;
 }
 
-function checkI($string)
-{
-    $contatore_vocali = 0;
-
-    for ($i = 0; $i < strlen($string); $i++) {
-
-        if ($string[$i] == 'i') {
-            $contatore_vocali++;
-        }
+function countI ($string) {
+    if ($string == "i") {
+        return true;
     }
-    //echo $contatore_vocali;
+    return false;
 }
 
-function checkO($string)
-{
-    $contatore_vocali = 0;
 
-    for ($i = 0; $i < strlen($string); $i++) {
-
-        if ($string[$i] == 'o') {
-            $contatore_vocali++;
-        }
+function countO ($string) {
+    if ($string == "o") {
+        return true;
     }
-    //echo $contatore_vocali;
+    return false;
+}
+function countU ($string) {
+    if ($string == "u") {
+        return true;
+    }
+    return false;
 }
 
-function checkU($string)
-{
+
+function countVocal($string) {
     $contatore_vocali = 0;
 
-    for ($i = 0; $i < strlen($string); $i++) {
-
-        if ($string[$i] == 'u') {
-            $contatore_vocali++;
-        }
-    }
-    //echo $contatore_vocali;
-}
-
-function checkVocali($string)
-{
-    $contatore_vocali = 0;
+    for ($i=0; $i < strlen($string) ; $i++) { 
+        if ((countA($string[$i]) == "a")||(countE($string[$i]) == "e")||(countI($string[$i]) == "i")||(countO($string[$i]) == "o")||(countU($string[$i]) == "u")) {
+            $contatore_vocali+=1;
+        } 
+    } echo $contatore_vocali;
     
-    for ($i = 0; $i < strlen($string); $i++) {
-
-       
-
-        if (checkA($string[$i]) || checkE($string[$i]) || checkI($string[$i]) || checkO($string[$i]) || checkU($string[$i])) {
-            
-            $contatore_vocali +=1;
-        }
-    }
-    echo $contatore_vocali;
 }
 
-checkVocali('aiuola');
+countVocal("aiuole");

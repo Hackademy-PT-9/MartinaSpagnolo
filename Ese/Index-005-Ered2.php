@@ -1,88 +1,67 @@
 <?php
 
 
-class Vertebrates {
+class Vertebrates
+{
+    public function __construct()
+    {
+       echo "sono un animale vertebrato!\n";
+    }
+
+}
+
+
+class ColdBlooded extends Vertebrates
+{   
     
-    public function __construct(){
-
-    }
-
-    protected function typeVertebrates() {
-        echo "sono un animale Vertebrato ";
-    }
    
-
-}
-
-
-class Cold_Blooded  extends Vertebrates{
-    
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
-        $this->typeVertebrates();
     }
-
-    protected function typeColdBlooded() {
+    protected function coldBlodeed()
+    {
        
-        echo "sono un animale a sangue freddo!";
+        echo "Sono un animale a sangue freddo!\n";
     }
-
 }
 
-class Reptiles extends Cold_Blooded {
-    
-    public function __construct(){
+class Fish extends ColdBlooded
+{
+
+    public function __construct()
+    {
         parent::__construct();
-        $this->typeColdBlooded();
+        $this->coldBlodeed();
+        echo "Sono un pesce!\n";
     }
-
-    protected function typeReptiles() {
-       
-        echo "sono un Rettile";
-    }
-
 
 }
 
-class Amphibians extends Cold_Blooded {
-    public function __construct(){
+class Reptiles extends ColdBlooded
+{
+
+    public function __construct()
+    {
         parent::__construct();
-        $this->typeColdBlooded();
-    }
-    protected function typeAmphibians() {
-       
-        echo "sono un Anfibio!";
+        $this->coldBlodeed();
+        echo "Sono un Serpente!\n";
     }
 
 }
 
-class Fish extends Cold_Blooded {
-    
-    public function __construct(){
+class Amphibians extends ColdBlooded
+{
+
+    public function __construct()
+    {
         parent::__construct();
-        $this->typeColdBlooded();
+        $this->coldBlodeed();
+        echo "Sono una Rana!\n";
     }
 
-    protected function typeFish() {
-       
-        echo "sono un Pesce!";
-    }
-
-
-
 }
 
-class Warm_Blooded extends Vertebrates{
-    
-}
-
-
-class Mammals {
-    
-}
-
-class Birds {
-    
-}
-
-$magikarp = new Fish (); //non passa la funzione
+//$magikarp = new Fish();
+//$snake = new Reptiles();
+$frog = new Amphibians();

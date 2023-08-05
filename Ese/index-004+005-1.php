@@ -18,14 +18,17 @@ class Company
     public $site;
     public $employees;
 
+    public static $annualCostEmployees = 0;
+
     public function __construct($name, $site, $employees = 0)       //Step 1
     {
         $this->name = $name;
         $this->site = $site;
         $this->employees = $employees;
+        self::$annualCostEmployees+=$employees *(1500*12);
         //echo $this->description(); // è possibile richiamare la funzione all'interno del costruttore
-        //$tot = $this->employees*(1500*12); 
-        //echo "Il costo annuale dell'Ufficio " . $name . " è di " . $tot . "\n"; ---> Step 4, senza metodo ma direttamente nel costruttore
+        //$this->annualCostEmployees = $employees *(1500*12);
+        //echo "Il costo annuale dell'Ufficio " . $name . " è di " . $annualCostEmployees . "\n"; ---> Step 4, senza metodo ma direttamente nel costruttore
     }
 
 
@@ -37,14 +40,19 @@ class Company
         return "L'ufficio" . " " . $this->name . " con sede in " . $this->site . " non ha dipendenti" . "\n";
     }
 
-    public function annualCost() { //Step 4.1 utilizzando metodo non nel costruttore ma richiamandolo di volta in volta
-        $tot = $this->employees*(1500*12);
+
+    // public function annualCost() { //Step 4.1 utilizzando metodo non nel costruttore ma richiamandolo di volta in volta
+    //     $tot = $this->employees*(1500*12);
         
-        if (!$tot) {
-            return "L'azienda" . " " . $this->name . " non ha alcun costo" . "\n";
-        }
-        return "Il costo annuale dell'Ufficio " . $this->name . " è di " . $tot . " Euro" . "\n";
+    //     if (!$tot) {
+    //         return "L'azienda" . " " . $this->name . " non ha alcun costo" . "\n";
+    //     }
+    //     return "Il costo annuale dell'Ufficio " . $this->name . " è di " . $tot . " Euro" . "\n";
          
+    // }
+
+    public static function printAnnualCost (){
+        return self::$annualCostEmployees;
     }
 
 
@@ -70,3 +78,7 @@ $company5 = new Company('Xioami', 'CHI', 3);
 // echo $company3->annualCost();
 // echo $company4->annualCost();
 // echo $company5->annualCost();
+
+//echo Company::$annualCostEmployees;
+
+echo Company::printAnnualCost(); //richiamo attraverso la classe (come prima) la funzione statica dipendende direttamente dalla classe.
