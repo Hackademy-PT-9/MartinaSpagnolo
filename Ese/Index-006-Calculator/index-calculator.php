@@ -56,7 +56,10 @@ class Rettagolo {
         echo $this->sum($b,$a)*2;
     }
 
-
+    public function getDiagonale($a,$b){
+        echo $this->sqr(($a * $a + $b * $b ));
+    }
+     
 
 }
 
@@ -68,4 +71,4 @@ $area = new Rettagolo(5,2);
 
 //$area->getArea(5,2);
 //$area->getPerimetro(5,2);
-
+//$area->getDiagonale(5,2);
