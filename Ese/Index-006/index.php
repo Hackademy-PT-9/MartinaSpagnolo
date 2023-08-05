@@ -13,10 +13,16 @@ class Post {
 
     }
 
+    public function showCategory (){
+        $this->category->getMyCategory();
+    }
+
 }
 
 
 $newPost = new Post ('1518', new History, 'guerra');
 
 var_dump($newPost);
+
+$newPost->showCategory();
 
