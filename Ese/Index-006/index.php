@@ -24,5 +24,5 @@ $newPost = new Post ('1518', new History, 'guerra');
 
 var_dump($newPost);
 
-$newPost->showCategory();
+$newPost->category->getMyCategory();
 
