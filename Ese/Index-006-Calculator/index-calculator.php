@@ -50,14 +50,14 @@ class Rettagolo {
     }
 
     public function getArea ($b,$a) {
-        echo $this->mul($b,$a);
+       
     }
     public function getPerimetro ($b,$a) {
-        echo $this->sum($b,$a)*2;
+        
     }
 
     public function getDiagonale($a,$b){
-        echo $this->sqr(($a * $a + $b * $b ));
+        
     }
      
 
@@ -67,7 +67,7 @@ class Rettagolo {
 // - Perimetro => 2b + 2h
 // - Diagonale =>  √ hˆ2 + bˆ2  (Tutto sotto radice).
 
-$area = new Rettagolo(5,2);
+//$area = new Rettagolo(5,2);
 
 //$area->getArea(5,2);
 //$area->getPerimetro(5,2);
