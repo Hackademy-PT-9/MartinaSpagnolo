@@ -13,6 +13,42 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/Home', function () {
+    return 'Home';
 });
+
+
+Route::get('/chi-siamo', function () {
+    return 'Chi Siamo';
+});
+
+
+Route::get('/contatti', function () {
+    return 'Contatti';
+});
+
+
+Route::get('/storia', function () {
+    return 'Our Story';
+});
+
+
+// Route::get('/Home', function () {
+//     return "sono una stringa";
+// });
+// Route::get('/123', function () {
+//     return 123;
+// });
+
+
+// Route::get('/array', function () {
+//     $lista = ["uno", 2, "tre"];
+//     return "sono la lista " . $lista[0] . " " . $lista[1] . " " . $lista[2];
+// });
+
+
+
+
+
+
