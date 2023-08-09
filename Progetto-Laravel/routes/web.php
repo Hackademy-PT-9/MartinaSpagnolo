@@ -15,22 +15,22 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/Home', function () {
-    return 'Home';
+    return view('welcome');
 });
 
 
 Route::get('/chi-siamo', function () {
-    return 'Chi Siamo';
+    return view('chisiamo');
 });
 
 
 Route::get('/contatti', function () {
-    return 'Contatti';
+    return view('contatti');
 });
 
 
 Route::get('/storia', function () {
-    return 'Our Story';
+    return view('storia');
 });
 
 
